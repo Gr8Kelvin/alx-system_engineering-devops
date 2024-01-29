@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 # Display Time - Hour, Minutes
 
-hour=0
+i=0
+j=1
 
-while [ $hour -le 12 ]
-do
-  echo "Hour: $hour"
-  minute=1
-  while [ $minute -le 59 ]
-  do
-    echo "$minute"
-    (( minute++ ))
-  done
-  (( hour++ ))
+while [ $i -le 12 ]; do
+	echo "Hour: $i"
+	while [ $j -le 59 ]; do
+		echo $j
+		j=$((j+1))
+	done
+	j=$((1))
+	i=$((i+1))
 done
